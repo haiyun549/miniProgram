@@ -1,0 +1,57 @@
+<!--pages/home/home.wxml-->
+
+<view class="search">
+  <input class="input" placeholder="搜索"/>
+</view>
+
+<swiper class="lunbotu" autoplay="true" indicator-dots="true">
+  <block wx:for="{{swiper}}" wx:key="index">
+    <swiper-item>
+      <image class="swiper_img" src="{{item.img}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="news_top">
+  <view class="top_title">小百科</view>
+</view>
+
+<view class="news_list">
+  <block wx:for="{{knowledge}}" wx:key="index">
+    <view class="news" bindtap="detail" data-kid="{{item.id}}">
+      <image class="news_img" src="{{item.img}}"></image>
+      <view class="news_content">
+        <view class="content_title">{{item.title}}</view>
+        <view class="content_info">
+          <view class="info">
+            <image class="info_img" src="{{icon_view}}"></image>
+            <view class="info_num">{{item.view_num}}</view>
+          </view>
+
+          <view class="info">
+            <block wx:if="{{item.fond === 0}}">
+              <image class="info_img" src="{{icon_fond}}"></image>
+              <view class="info_num">{{item.fond_num}}</view>
+            </block>
+            <block wx:else>
+              <image class="info_img" src="{{icon_fond_fill}}"></image>
+              <view class="info_num_fill">{{item.fond_num}}</view>
+            </block>
+          </view>
+
+          <view class="info">
+            <block wx:if="{{item.collect === 0}}">
+              <image class="info_img" src="{{icon_collect}}" data-collect="{{item.collect}}"></image>
+              <view class="info_num">{{item.collect_num}}</view>
+            </block>
+            <block wx:else>
+              <image class="info_img" src="{{icon_collect_fill}}" data-collect="{{item.collect}}"></image>
+              <view class="info_num_fill">{{item.collect_num}}</view>
+            </block>
+          </view>
+
+        </view>
+      </view>
+    </view>
+</block>
+</view>

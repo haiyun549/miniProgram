@@ -1,0 +1,60 @@
+/* pages/my/my.wxss */
+page {
+  background-color: #f3f3f3;
+}
+
+.login {
+  margin-bottom: 25rpx;
+  padding: 30rpx 0;
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.login_img {
+  height: 150rpx;
+  width: 150rpx;
+  margin: 0 30rpx;
+}
+
+.login_txt {
+  font-size: 30rpx;
+  color: #515151;
+  flex-grow: 1;
+}
+
+.icon {
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 30rpx;
+}
+
+.info {
+  margin-bottom: 25rpx;
+  padding-left: 30rpx;
+  background-color: #fff;
+}
+
+.item {
+  padding: 15rpx 0;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.item_img {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 30rpx;
+}
+
+.item_content {
+  font-size: 30rpx;
+  color: #515151;
+  flex-grow: 1;
+}

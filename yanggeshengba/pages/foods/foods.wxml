@@ -1,0 +1,29 @@
+<!--pages/foods/foods.wxml-->
+<view class="search">
+  <input class="input" placeholder="搜索"/>
+</view>
+
+<view class="top">
+  <block wx:for="{{top}}">
+    <view class="top_classify">{{item.classify}}</view>
+  </block>
+</view>
+
+<view class="img">
+  <image class="img" src="/images/yezicai.jpeg"></image>
+</view>
+
+<view class="list">
+  <block wx:for="{{list}}">
+    <view class="list_item">
+      <image class="item_img" src="{{item.img}}"></image>
+      <view class="item_content">
+        <view class="content.name">{{item.name}}</view>
+        <view class="tags">
+          <view class="tag_good">{{item.tag1}}</view>
+          <view class="tag_bad">{{item.tag2}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

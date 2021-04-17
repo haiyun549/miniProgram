@@ -1,0 +1,28 @@
+<!--pages/baike.wxml-->
+<view class="search">
+  <input class="input" placeholder="搜索"/>
+</view>
+
+<block wx:for="{{list}}">
+  <view class="list">
+    <view class="top_name">
+      <view class="name">{{item.name}}</view>
+    </view>
+    <view>
+      <view class="item">
+        <view class="item_title">
+          <image class="title_img" src="/images/coffee03.png"></image>
+          <view class="title_txt">原理</view>
+        </view>
+        <view class="item_content">{{item.prin}}</view>
+      </view>
+      <view class="item">
+        <view class="item_title">
+          <image class="title_img" src="/images/noodles02.png"></image>
+          <view class="title_txt">建议</view>
+        </view>
+        <view class="item_content">{{item.sug}}</view>
+      </view>
+    </view>
+  </view>
+</block>

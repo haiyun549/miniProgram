@@ -1,0 +1,68 @@
+/* pages/knowledge/knowledge.wxss */
+page {
+  background-color: #f3f3f3;
+}
+
+.all {
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  padding: 30rpx 25rpx;
+}
+
+.content {
+  margin: 0 25rpx;
+  padding: 25rpx 0;
+  border-top: 1rpx solid #f3f3f3;
+  border-bottom: 1rpx solid #f3f3f3;
+  font-size: 35rpx;
+}
+
+.bottom {
+  padding: 25rpx 25rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.view {
+  text-align: left;
+  font-size: 30rpx;
+  color: #c5c5c5;
+}
+
+.click {
+  display: flex;
+  justify-content: center;
+  height: 75rpx;
+}
+
+.click_box {
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.click_img {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 10rpx;
+}
+
+.click_num {
+  text-align: center;
+  font-size: 25rpx;
+  color: #c5c5c5;
+}
+
+.click_num_fill {
+  text-align: center;
+  font-size: 25rpx;
+  color: #f4ea2a;
+}

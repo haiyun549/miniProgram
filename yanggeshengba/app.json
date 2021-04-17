@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/keep/keep",
+    "pages/my/my",
+    "pages/foods/foods",
+    "pages/knowledge/knowledge"
+  ],
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#29a03c",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_fill.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/images/pear.png",
+        "selectedIconPath": "/images/pear_fill.png",
+        "pagePath": "pages/foods/foods",
+        "text": "饮食"
+      },
+      {
+        "iconPath": "/images/pot.png",
+        "selectedIconPath": "/images/pot_fill.png",
+        "pagePath": "pages/keep/keep",
+        "text": "调养"
+      },
+      {
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my_fill.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "养个生吧",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
