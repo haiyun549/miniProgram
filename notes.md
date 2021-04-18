@@ -254,7 +254,7 @@
 ## 2.home页面加载
 
 - 目标：
-  - 获取swiper，文章信息
+  - swiper内容显示，文章内容显示
   - 查swiper的img，查knowledge左连接fondCollect的所有（null填为0）
 - 小程序端：
   - data：swiper[]，knowledge[]
@@ -265,48 +265,52 @@
   - 查询，输出swiper，knowledge
   - ![image-20210417233734932](笔记.assets/image-20210417233734932.png)
 
-## 3.跳转knowledge页面加载
+## 3.跳转knowledge页面加载，浏览记录+1
 
 - 目标：
-  - 获取指定id文章信息
-  - 改knowledge中view_num+1，查knowledge左连接fondCollect的所有（指定uid，kid，null填为0）
+  - kid浏览数量修改+1，uid, kid浏览记录增加，uid, kid文章内容、点赞状态显示
+  - 改knowledge中view_num+1，增fondCollect浏览记录（有则改），查knowledge左连接fondCollect的所有（指定uid，kid）
 - 小程序端：
   - data：knowledge[]
   - uid，kid访问，输出knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
   - ![image-20210417235220783](笔记.assets/image-20210417235220783.png)
 - 服务器端：
   - 数据库：knowledge，fondCollect
+  
   - uid，kid查询，输出knowledge
-  - ![image-20210417235412548](笔记.assets/image-20210417235412548.png)
+  
+  - ![image-20210418153959509](笔记.assets/image-20210418153959509.png)
+  
+    ![image-20210418154033940](笔记.assets/image-20210418154033940.png)
+  
+    ![image-20210418154055212](笔记.assets/image-20210418154055212.png)
 
 ## 4.点赞、收藏响应
 
 - 目标：
 
-  - 点赞，指定个人及文章响应，获取文章点赞数量信息
-  - 查fondCollect中uid和kid的fond（有则改，无则增），改fondCollect中uid，kid的fond，改knowledge的fond_num为fondCollect指定kid的fond总和，查uid和kid的knowledge左连接fondCollect
+  - uid, kid的点赞状态和数量的修改、显示
+  - 查fondCollect中uid和kid的fond，改fondCollect中的fond（0-1，1-0），改knowledge的fond_num为fondCollect指定kid的fond总和，查uid和kid的knowledge左连接fondCollect
 
 - 小程序端：
 
   - data：knowledge[]
 
-  - uid，kid，fond访问，输出knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
+  - uid，kid访问，输出knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
 
-  - ![image-20210418000535114](笔记.assets/image-20210418000535114.png)
-
-    ![image-20210418000553378](笔记.assets/image-20210418000553378.png)
+  - ![image-20210418154432733](笔记.assets/image-20210418154432733.png)
 
 - 服务器端：
 
   - 数据库：knowledge，fondCollect
 
-  - uid，kid，fond查询，输出knowledge
+  - uid，kid查询，输出knowledge
 
-  - ![image-20210418000713262](笔记.assets/image-20210418000713262.png)
+  - ![image-20210418154613904](笔记.assets/image-20210418154613904.png)
 
-    ![image-20210418000736559](笔记.assets/image-20210418000736559.png)
+    ![image-20210418154639053](笔记.assets/image-20210418154639053.png)
 
-    ![image-20210418000753240](笔记.assets/image-20210418000753240.png)
+## 5.浏览记录、收藏记录
 
-    
+
 

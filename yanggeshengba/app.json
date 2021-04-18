@@ -4,7 +4,8 @@
     "pages/keep/keep",
     "pages/my/my",
     "pages/foods/foods",
-    "pages/knowledge/knowledge"
+    "pages/knowledge/knowledge",
+    "pages/myCollect/myCollect"
   ],
   "tabBar": {
     "color": "#515151",

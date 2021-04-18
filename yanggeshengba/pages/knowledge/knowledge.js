@@ -99,22 +99,22 @@ Page({
   },
 
   fond: function(e){
+    let that = this;
     let kid = e.currentTarget.dataset.kid;
     let uid = (wx.getStorageSync('uid') || ('err'))
-    let fond = e.currentTarget.dataset.fond;
-    let that = this;
-    //传递参数时会转为字符串到nodejs
-    let obj = {
-      fond: fond
-    };
-    let data = JSON.stringify(obj);
-    console.log(data)
+    // let fond = e.currentTarget.dataset.fond;
+    // //传递参数时会转为字符串到nodejs
+    // let obj = {
+    //   fond: fond
+    // };
+    // let data = JSON.stringify(obj);
+    // console.log(data)
     wx.request({
       url: 'https://haiyun.luzhenmin.com/tapFond',
       data: {
         kid: kid,
         uid: uid,
-        data: data
+        // data: data
       },
       header: {
         'content-type': 'application/json'//默认值
@@ -129,21 +129,21 @@ Page({
   },
 
   collect: function(e){
+    let that = this;
     let uid = (wx.getStorageSync('uid') || ('err'));
     let kid = e.currentTarget.dataset.kid;
     console.log(kid);
-    let collect = e.currentTarget.dataset.collect;
-    let that = this;
-    let obj = {
-      collect: collect
-    };
-    let data = JSON.stringify(obj);
+    // let collect = e.currentTarget.dataset.collect;
+    // let obj = {
+    //   collect: collect
+    // };
+    // let data = JSON.stringify(obj);
     wx.request({
       url: 'https://haiyun.luzhenmin.com/tapCollect',
       data: {
         kid: kid,
         uid: uid,
-        data: data
+        // data: data
       },
       header: {
         'content-type': 'application/json'//默认值

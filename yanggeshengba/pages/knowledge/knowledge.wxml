@@ -8,22 +8,22 @@
 
       <view class="click_box">
         <block wx:if="{{knowledge[0].fond === 0}}">
-          <image class="click_img" src="{{icon_fond}}" bindtap="fond" data-kid="{{knowledge[0].id}}" data-fond="{{knowledge[0].fond}}"></image>
+          <image class="click_img" src="{{icon_fond}}" bindtap="fond" data-kid="{{knowledge[0].kid}}"></image>
           <view class="click_num">{{knowledge[0].fond_num}}</view>
         </block>
         <block wx:else>
-          <image class="click_img" src="{{icon_fond_fill}}" bindtap="fond" data-kid="{{knowledge[0].id}}" data-fond="{{knowledge[0].fond}}"></image>
+          <image class="click_img" src="{{icon_fond_fill}}" bindtap="fond" data-kid="{{knowledge[0].kid}}"></image>
           <view class="click_num_fill">{{knowledge[0].fond_num}}</view>
         </block>
       </view>
 
       <view class="click_box">
         <block wx:if="{{knowledge[0].collect === 0}}">
-          <image class="click_img" src="{{icon_collect}}" bindtap="collect" data-kid="{{knowledge[0].id}}" data-collect="{{knowledge[0].collect}}"></image>
+          <image class="click_img" src="{{icon_collect}}" bindtap="collect" data-kid="{{knowledge[0].kid}}"></image>
           <view class="click_num">{{knowledge[0].collect_num}}</view>
         </block>
         <block wx:else>
-          <image class="click_img" src="{{icon_collect_fill}}" bindtap="collect" data-kid="{{knowledge[0].id}}" data-collect="{{knowledge[0].collect}}"></image>
+          <image class="click_img" src="{{icon_collect_fill}}" bindtap="collect" data-kid="{{knowledge[0].kid}}"></image>
           <view class="click_num_fill">{{knowledge[0].collect_num}}</view>
         </block>
       </view>
