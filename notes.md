@@ -157,7 +157,7 @@
 
 ## 2.添加小程序tabbar
 
-<img src="笔记.assets/image-20210402161032759.png" alt="image-20210402161032759" style="zoom:50%;" />
+<img src="notes.assets/image-20210402161032759.png" alt="image-20210402161032759" style="zoom:50%;" />
 
 ## 3.实现跳转
 
@@ -176,7 +176,7 @@
 
 ## 1.获取用户登录数据
 
-<img src="笔记.assets/image-20210330150252109.png" alt="image-20210330150252109" style="zoom: 50%;" />
+<img src="notes.assets/image-20210330150252109.png" alt="image-20210330150252109" style="zoom: 50%;" />
 
 - 在login中写入函数：登录获取用户code，发送到服务器处理，服务器将三者发送到微信端，微信端返回真实数据到服务器。（最终服务器获得用户openid）
 
@@ -201,17 +201,17 @@
 
   - login中写入访问服务器（https）的函数
 
-    <img src="笔记.assets/image-20210402162514213.png" alt="image-20210402162514213" style="zoom: 50%;" />
+    <img src="notes.assets/image-20210402162514213.png" alt="image-20210402162514213" style="zoom: 50%;" />
 
   - 域名添加到小程序后台
 
   - 本地修改index.js文件，补充https协议内容
 
-    ![image-20210402163608047](笔记.assets/image-20210402163608047.png)
+    ![image-20210402163608047](notes.assets/image-20210402163608047.png)
 
-    ![image-20210402163627564](笔记.assets/image-20210402163627564.png)
+    ![image-20210402163627564](notes.assets/image-20210402163627564.png)
 
-    ![image-20210402163641220](笔记.assets/image-20210402163641220.png)
+    ![image-20210402163641220](notes.assets/image-20210402163641220.png)
 
   - index.js上传到服务器并启动，刷新小程序页面，即出现openid
 
@@ -219,9 +219,9 @@
 
 - 在onload中写入函数：加载时访问服务器，服务器访问数据库赋值到data，再返回到小程序。
 
-  <img src="笔记.assets/3092cca23d9bae732562fc0b1fcd2ac.png" alt="3092cca23d9bae732562fc0b1fcd2ac" style="zoom:50%;" />
+  <img src="notes.assets/3092cca23d9bae732562fc0b1fcd2ac.png" alt="3092cca23d9bae732562fc0b1fcd2ac" style="zoom:50%;" />
 
-  <img src="笔记.assets/8ef4cb4972dbef556fe07d3a0720e91.png" alt="8ef4cb4972dbef556fe07d3a0720e91" style="zoom:50%;" />
+  <img src="notes.assets/8ef4cb4972dbef556fe07d3a0720e91.png" alt="8ef4cb4972dbef556fe07d3a0720e91" style="zoom:50%;" />
 
 ## 3.总结
 
@@ -239,13 +239,13 @@
 
 - 改进index.js文件，增加数据库池
 
-  <img src="笔记.assets/image-20210411131615623.png" alt="image-20210411131615623" style="zoom: 50%;" />
+  <img src="notes.assets/image-20210411131615623.png" alt="image-20210411131615623" style="zoom: 50%;" />
 
 - 池连接数据库，有openid则执行查询语句，返回表中的id到userid变量中，返回到result，没有则执行插入语句，返回插入的id到userid变量中，返回到result。
 
-  <img src="笔记.assets/image-20210411165147176.png" alt="image-20210411165147176" style="zoom:50%;" />
+  <img src="notes.assets/image-20210411165147176.png" alt="image-20210411165147176" style="zoom:50%;" />
 
-  <img src="笔记.assets/image-20210411164948215.png" alt="image-20210411164948215" style="zoom: 50%;" />
+  <img src="notes.assets/image-20210411164948215.png" alt="image-20210411164948215" style="zoom: 50%;" />
 
 - 小程序端可见result，数据库可见插入记录
 
@@ -259,11 +259,11 @@
 - 小程序端：
   - data：swiper[]，knowledge[]
   - 访问，输出swiper[]，knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
-  - ![image-20210417234303587](笔记.assets/image-20210417234303587.png)
+  - ![image-20210417234303587](notes.assets/image-20210417234303587.png)
 - 服务器端：
   - 数据库：swiper，knowledge
   - 查询，输出swiper，knowledge
-  - ![image-20210417233734932](笔记.assets/image-20210417233734932.png)
+  - ![image-20210417233734932](notes.assets/image-20210417233734932.png)
 
 ## 3.跳转knowledge页面加载，浏览记录+1
 
@@ -273,17 +273,17 @@
 - 小程序端：
   - data：knowledge[]
   - uid，kid访问，输出knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
-  - ![image-20210417235220783](笔记.assets/image-20210417235220783.png)
+  - ![image-20210417235220783](notes.assets/image-20210417235220783.png)
 - 服务器端：
   - 数据库：knowledge，fondCollect
   
   - uid，kid查询，输出knowledge
   
-  - ![image-20210418153959509](笔记.assets/image-20210418153959509.png)
+  - ![image-20210418153959509](notes.assets/image-20210418153959509.png)
   
-    ![image-20210418154033940](笔记.assets/image-20210418154033940.png)
+    ![image-20210418154033940](notes.assets/image-20210418154033940.png)
   
-    ![image-20210418154055212](笔记.assets/image-20210418154055212.png)
+    ![image-20210418154055212](notes.assets/image-20210418154055212.png)
 
 ## 4.点赞、收藏响应
 
@@ -298,7 +298,7 @@
 
   - uid，kid访问，输出knowledge[]，wx: if取knowledge[0].fond和.collect判断并显示状态
 
-  - ![image-20210418154432733](笔记.assets/image-20210418154432733.png)
+  - ![image-20210418154432733](notes.assets/image-20210418154432733.png)
 
 - 服务器端：
 
@@ -306,9 +306,9 @@
 
   - uid，kid查询，输出knowledge
 
-  - ![image-20210418154613904](笔记.assets/image-20210418154613904.png)
+  - ![image-20210418154613904](notes.assets/image-20210418154613904.png)
 
-    ![image-20210418154639053](笔记.assets/image-20210418154639053.png)
+    ![image-20210418154639053](notes.assets/image-20210418154639053.png)
 
 ## 5.我的收藏、浏览历史
 
