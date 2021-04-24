@@ -1,5 +1,13 @@
 <!--pages/myCollect/myCollect.wxml-->
-<view class="search">
+<import src="../../template/top.wxml"/>
+<import src="../../template/list.wxml"/>
+
+<template is="search"></template>
+
+<template is="top" data="{{top}}"></template>
+<template is="knowledge" data="{{knowledge,icon_view,icon_fond,icon_fond_fill,icon_collect,icon_collect_fill}}"></template>
+
+<!-- <view class="search">
   <input class="input" placeholder="搜索"/>
 </view>
 
@@ -41,4 +49,4 @@
       </view>
     </view>
 </block>
-</view>
+</view> -->

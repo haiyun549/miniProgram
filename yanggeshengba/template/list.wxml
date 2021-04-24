@@ -1,0 +1,108 @@
+<template name="knowledge">
+  <view class="knowledge_list">
+    <block wx:for="{{knowledge}}" wx:key="index">
+      <view class="knowledge" bindtap="detail" data-kid="{{item.id}}">
+        <image class="k_img" src="{{item.img}}"></image>
+        <view class="k_content">
+          <view class="k_title">{{item.title}}</view>
+          <view class="k_info">
+            <view class="ki">
+              <image class="ki_img" src="{{icon_view}}"></image>
+              <view class="ki_num">{{item.view_num}}</view>
+            </view>
+
+            <view class="ki">
+              <block wx:if="{{item.fond === 0}}">
+                <image class="ki_img" src="{{icon_fond}}"></image>
+                <view class="ki_num">{{item.fond_num}}</view>
+              </block>
+              <block wx:else>
+                <image class="ki_img" src="{{icon_fond_fill}}"></image>
+                <view class="ki_num_fill">{{item.fond_num}}</view>
+              </block>
+            </view>
+
+            <view class="ki">
+              <block wx:if="{{item.collect === 0}}">
+                <image class="ki_img" src="{{icon_collect}}" data-collect="{{item.collect}}"></image>
+                <view class="ki_num">{{item.collect_num}}</view>
+              </block>
+              <block wx:else>
+                <image class="ki_img" src="{{icon_collect_fill}}" data-collect="{{item.collect}}"></image>
+                <view class="ki_num_fill">{{item.collect_num}}</view>
+              </block>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+
+<template name="foods">
+  <view class="foods_list">
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="foods">
+        <image class="f_img" src="{{item.img}}"></image>
+        <view class="f_content">
+          <view class="fc_name">{{item.name}}</view>
+          <view class="fc_tags">
+            <view class="fc_tag_good">{{item.tag1}}</view>
+            <view class="fc_tag_bad">{{item.tag2}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+
+<template name="keep">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="keep_list">
+      <view class="top_name">
+        <view class="name">{{item.name}}</view>
+      </view>
+      <view>
+        <view class="kp_item">
+          <view class="kpi_title">
+            <image class="kpi_title_img" src="/images/coffee03.png"></image>
+            <view class="kpi_title_txt">{{title.prin}}</view>
+          </view>
+          <view class="kpi_content">{{item.prin}}</view>
+        </view>
+        <view class="kp_item">
+          <view class="kpi_title">
+            <image class="kpi_title_img" src="/images/noodles02.png"></image>
+            <view class="kpi_title_txt">{{title.sug}}</view>
+          </view>
+          <view class="kpi_content">{{item.sug}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>
+
+<template name="my">
+  <view class="my_list">
+    <block wx:for="{{info}}" wx:key="index">
+      <view class="m_item" bindtap="tapItem" data-type="{{item.content}}">
+        <image class="mi_img" src="{{item.img}}"></image>
+        <view class="mi_content">{{item.content}}</view>
+        <image class="arr_icon" src="{{item.icon}}"></image>
+      </view>
+    </block>
+  </view>
+</template>
+
+<template name="my2">
+  <view class="my_list">
+    <block wx:for="{{setting}}" wx:key="index">
+      <view class="m_item">
+        <image class="mi_img" src="{{item.img}}"></image>
+        <view class="mi_content">{{item.content}}</view>
+        <image class="arr_icon" src="{{item.icon}}"></image>
+      </view>
+    </block>
+  </view>
+</template>

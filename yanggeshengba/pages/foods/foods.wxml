@@ -1,10 +1,11 @@
 <!--pages/foods/foods.wxml-->
-<view class="search">
-  <input class="input" placeholder="搜索"/>
-</view>
+<import src="../../template/top.wxml"/>
+<import src="../../template/list.wxml"/>
+
+<template is="search"></template>
 
 <view class="top">
-  <block wx:for="{{top}}">
+  <block wx:for="{{top}}" wx:key="index">
     <view class="top_classify">{{item.classify}}</view>
   </block>
 </view>
@@ -13,8 +14,10 @@
   <image class="img" src="/images/yezicai.jpeg"></image>
 </view>
 
-<view class="list">
-  <block wx:for="{{list}}">
+<template is="foods" data="{{list}}"></template>
+
+<!-- <view class="list">
+  <block wx:for="{{list}}" wx:key="index">
     <view class="list_item">
       <image class="item_img" src="{{item.img}}"></image>
       <view class="item_content">
@@ -26,4 +29,4 @@
       </view>
     </view>
   </block>
-</view>
+</view> -->

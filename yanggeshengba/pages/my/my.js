@@ -90,5 +90,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  tapItem: function(e){
+    console.log(e.currentTarget.dataset)
+    let type = e.currentTarget.dataset.type;
+    if(type == "我的收藏" || type == "浏览历史"){
+      console.log("mytype: "+type)
+      wx.navigateTo({
+        url: "../myCollect/myCollect?type="+type
+      })  
+    }
   }
 })

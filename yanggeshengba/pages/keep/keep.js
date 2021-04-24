@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title: {
+      prin: "原理",
+      sug: "建议"
+    },
     list: [
       {
         name: "痤疮",
@@ -29,10 +33,6 @@ Page({
    */
   onLoad: function (options) {
     console.log("onload")
-    console.log(options)
-    this.setData ({
-      id: options.idabc
-    })
   },
 
   /**

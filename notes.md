@@ -310,7 +310,19 @@
 
     ![image-20210418154639053](笔记.assets/image-20210418154639053.png)
 
-## 5.浏览记录、收藏记录
+## 5.我的收藏、浏览历史
 
-
+- 目标：
+  - 跳转到我的收藏、浏览历史页面，页面分别获取uid的对应信息，点击文章直接跳转到knowledge（同home中的跳转）
+  - my页面bindtap，根据content选择跳转页面到myCollect，后端根据content查询我的收藏、浏览历史
+- 小程序端：
+  - data：top, knowledge[]
+  - onLoad修改top，uid, type访问，输出knowledge[]（同home）
+  - ![image-20210424120403078](notes.assets/image-20210424120403078.png)
+  - ![image-20210424120423920](notes.assets/image-20210424120423920.png)
+- 服务器端：
+  - 数据库：knowledge，fondCollect
+  - type判断，uid查询，输出knowledge
+  - ![image-20210424120616292](notes.assets/image-20210424120616292.png)
+  - ![image-20210424120631382](notes.assets/image-20210424120631382.png)
 

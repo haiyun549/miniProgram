@@ -1,0 +1,11 @@
+<template name="search">
+  <view class="search">
+    <input class="s_input" placeholder="搜索"/>
+  </view>
+</template>
+
+<template name = "top">
+  <view class="top">
+    <view class="top_title">{{top}}</view>
+  </view>
+</template>

@@ -1,4 +1,5 @@
 // pages/knowledge/knowledge.js
+const app = getApp();
 Page({
 
   /**
@@ -28,7 +29,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
-    let uid = (wx.getStorageSync('uid') || ('err'));
+    let uid = app.globalData.uid;
     let kid = options.kid;
     let that = this;
     wx.request({
@@ -101,7 +102,7 @@ Page({
   fond: function(e){
     let that = this;
     let kid = e.currentTarget.dataset.kid;
-    let uid = (wx.getStorageSync('uid') || ('err'))
+    let uid = app.globalData.uid;
     // let fond = e.currentTarget.dataset.fond;
     // //传递参数时会转为字符串到nodejs
     // let obj = {
@@ -130,7 +131,7 @@ Page({
 
   collect: function(e){
     let that = this;
-    let uid = (wx.getStorageSync('uid') || ('err'));
+    let uid = app.globalData.uid;
     let kid = e.currentTarget.dataset.kid;
     console.log(kid);
     // let collect = e.currentTarget.dataset.collect;

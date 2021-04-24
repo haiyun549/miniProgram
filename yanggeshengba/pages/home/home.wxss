@@ -3,19 +3,6 @@ page {
   background-color: #f3f3f3;
 }
 
-.search {
-  padding: 25rpx;
-  background-color: #fff;
-}
-
-.input {
-  height: 50rpx;
-  font-size: 30rpx;
-  text-align: center;
-  background-color: #f3f3f3;
-  border-radius: 25rpx;
-}
-
 .lunbotu {
   height: 400rpx;
   margin-bottom: 25rpx;

@@ -1,26 +1,11 @@
 <!--pages/my/my.wxml-->
+<import src="../../template/list.wxml"/>
+
 <view class="login">
     <image class="login_img" src="/images/unlogin.png"></image>
     <view class="login_txt">点击此处登录</view>
-    <image class="icon" src="/images/right.png"></image>
+    <image class="arr_icon" src="/images/right.png"></image>
 </view>
 
-<view class="info">
-  <block wx:for="{{info}}">
-    <view class="item">
-    <image class="item_img" src="{{item.img}}"></image>
-    <view class="item_content">{{item.content}}</view>
-    <image class="icon" src="{{item.icon}}"></image>
-  </view>
-  </block>
-</view>
-
-<view class="info">
-  <block wx:for="{{setting}}">
-    <view class="item">
-    <image class="item_img" src="{{item.img}}"></image>
-    <view class="item_content">{{item.content}}</view>
-    <image class="icon" src="{{item.icon}}"></image>
-  </view>
-  </block>
-</view>
+<template is="my" data="{{info}}"></template>
+<template is="my2" data="{{setting}}"></template>
