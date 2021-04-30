@@ -81,7 +81,7 @@
   display: flex;
 }
 
-.foods_list:not(:last-child) {
+.foods:not(:last-child) {
   border-bottom: 1rpx solid #f3f3f3;
 }
 
@@ -92,33 +92,28 @@
 }
 
 .f.content {
-  flex-grow: 1;
   display: flex;
-
+  flex-direction: column;
 }
 
 .fc_name {
   font-size: 30rpx;
-  height: 50rpx;
 }
 
 .fc_tags {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .fc_tag_good {
-  height: 30rpx;
-  font-size: 28rpx;
+  font-size: 25rpx;
   color: #29a03c;
-  border-radius: 15rpx;
   margin-top: 5rpx;
 }
 
 .fc_tag_bad {
-  height: 30rpx;
-  font-size: 28rpx;
+  font-size: 25rpx;
   color: red;
-  border-radius: 15rpx;
   margin-top: 5rpx;
 }
 
@@ -171,7 +166,7 @@
   margin-left: 15rpx;
   border-left: 1rpx solid #f3f3f3;
   padding-left: 30rpx;
-  font-size: 30rpx;
+  font-size: 25rpx;
   display: flex;
   align-items: center;
 }

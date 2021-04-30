@@ -2,7 +2,8 @@
 <import src="../../template/top.wxml"/>
 <import src="../../template/list.wxml"/>
 
-<template is="search"></template>
+<!-- <template is="search"></template> -->
+<search></search>
 
 <swiper class="lunbotu" autoplay="true" indicator-dots="true">
   <block wx:for="{{swiper}}" wx:key="index">

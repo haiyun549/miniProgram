@@ -44,12 +44,14 @@
   <view class="foods_list">
     <block wx:for="{{list}}" wx:key="index">
       <view class="foods">
-        <image class="f_img" src="{{item.img}}"></image>
+        <view class="f_img">
+          <image class="f_img" src="{{item.img}}"></image>
+        </view>
         <view class="f_content">
           <view class="fc_name">{{item.name}}</view>
           <view class="fc_tags">
-            <view class="fc_tag_good">{{item.tag1}}</view>
-            <view class="fc_tag_bad">{{item.tag2}}</view>
+            <view class="fc_tag_good" wx:if="{{item.tag_good != null}}">富含：{{item.tag_good}}</view>
+            <view class="fc_tag_bad" wx:if="{{item.tag_bad != null}}">注意：{{item.tag_bad}}</view>
           </view>
         </view>
       </view>
@@ -67,16 +69,16 @@
         <view class="kp_item">
           <view class="kpi_title">
             <image class="kpi_title_img" src="/images/coffee03.png"></image>
-            <view class="kpi_title_txt">{{title.prin}}</view>
+            <view class="kpi_title_txt">{{title.principle}}</view>
           </view>
-          <view class="kpi_content">{{item.prin}}</view>
+          <view class="kpi_content">{{item.principle}}</view>
         </view>
         <view class="kp_item">
           <view class="kpi_title">
             <image class="kpi_title_img" src="/images/noodles02.png"></image>
-            <view class="kpi_title_txt">{{title.sug}}</view>
+            <view class="kpi_title_txt">{{title.suggestion}}</view>
           </view>
-          <view class="kpi_content">{{item.sug}}</view>
+          <view class="kpi_content">{{item.suggestion}}</view>
         </view>
       </view>
     </view>

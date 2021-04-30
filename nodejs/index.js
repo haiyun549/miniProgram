@@ -24,6 +24,9 @@ app.get('/getKnowledge',get.getKnowledge);
 app.get('/getMyCollectView',get.getMyCollectView);
 app.get('/tapFond',tap.tapFond);
 app.get('/tapCollect',tap.tapCollect);
+app.get('/getTabs',get.getTabs);
+app.get('/getFoods',get.getFoods);
+app.get('/getKeep',get.getKeep);
 
 
 //配置服务端口80 443

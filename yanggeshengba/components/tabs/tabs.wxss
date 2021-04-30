@@ -1,0 +1,32 @@
+/* components/tabs/tabs.wxss */
+.top {
+  border-top: 1rpx solid #f3f3f3;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.top_classify {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* border-bottom: 5rpx solid #29a03c; */
+}
+
+.top_content {
+  width: 60rpx;
+  margin: 10rpx;
+  padding: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.active {
+  font-weight: bolder;
+  border-bottom: 5rpx solid #29a03c;
+}

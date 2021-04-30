@@ -1,0 +1,4 @@
+<!--components/search/search.wxml-->
+<view class="search">
+  <input class="s_input" placeholder="搜索"/>
+</view>

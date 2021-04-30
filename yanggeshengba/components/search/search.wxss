@@ -1,0 +1,14 @@
+/* components/search/search.wxss */
+/* 搜索框 */
+.search {
+  padding: 25rpx;
+  background-color: #fff;
+}
+
+.s_input {
+  height: 50rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #f3f3f3;
+  border-radius: 25rpx;
+}

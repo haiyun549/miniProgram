@@ -326,3 +326,40 @@
   - ![image-20210424120616292](notes.assets/image-20210424120616292.png)
   - ![image-20210424120631382](notes.assets/image-20210424120631382.png)
 
+## 6.饮食页面多个tab的切换与加载
+
+- 目标：
+
+  - ![image-20210430145113212](notes.assets/image-20210430145113212.png)
+  - tab点击即可选中并显示对于页面
+
+- 小程序端：
+
+  - 在页面使用组件<tabs>并能传入数据和响应tap
+
+  - ![image-20210430145411715](notes.assets/image-20210430145411715.png)
+
+    ![image-20210430145549641](notes.assets/image-20210430145549641.png)
+
+  - 新建组件tabs，写好wxml和wxss，在js中写好数据属性、tap方法
+
+  - ![image-20210430145940811](notes.assets/image-20210430145940811.png)
+
+    ![image-20210430145758176](notes.assets/image-20210430145758176.png)
+
+    ![image-20210430150015094](notes.assets/image-20210430150015094.png)
+
+  - data：tabs[], list[]
+  - onload加载，输出tabs，index访问，输出index的list[]
+  - ![image-20210430150342190](notes.assets/image-20210430150342190.png)
+
+- 服务器端：
+
+  - 数据库：foodsType, foods
+
+  - 查询foodsType，输出type，index查询，输出list
+
+  - ![image-20210430150624790](notes.assets/image-20210430150624790.png)
+
+    ![image-20210430150642214](notes.assets/image-20210430150642214.png)
+

@@ -230,7 +230,74 @@ function getKnowledge(req,res){
     })
 }
 
+function getTabs(req,res) {
+    pool.getConnection(function (err, connection) {
+        let sql = "select type from foodsType where status = 1";
+        console.log(sql);
+        connection.query(sql, function (err, rows) {
+            if (err) {
+                throw err;
+            } else {
+                let result = {
+                    "status": "200",
+                    "success": true
+                }
+                result.type = rows;
+                console.log(result.type);
+                res.json(result);
+            }
+        })
+        connection.release();
+    })
+}
+
+function getFoods(req,res) {
+    pool.getConnection(function (err, connection) {
+        let index = req.query.index;
+        let sql = `select * from foods where type = ${index}`;
+        console.log(sql);
+        connection.query(sql, function (err, rows) {
+            if (err) {
+                throw err;
+            } else {
+                let result = {
+                    "status": "200",
+                    "success": true
+                }
+                result.list = rows;
+                console.log(result.list);
+                res.json(result);
+            }
+        })
+        connection.release();
+    })
+}
+
+function getKeep(req,res) {
+    pool.getConnection(function (err, connection) {
+        let sql = "select * from keep";
+        console.log(sql);
+        connection.query(sql, function (err, rows) {
+            if (err) {
+                throw err;
+            } else {
+                let result = {
+                    "status": "200",
+                    "success": true
+                }
+                result.list = rows;
+                console.log(result.list);
+                res.json(result);
+            }
+        })
+        connection.release();
+    })
+}
+
 exports.getOpenId = getOpenId;
 exports.getHome = getHome;
 exports.getKnowledge = getKnowledge;
 exports.getMyCollectView = getMyCollectView;
+exports.getTabs = getTabs;
+exports.getFoods = getFoods;
+exports.getKeep = getKeep;

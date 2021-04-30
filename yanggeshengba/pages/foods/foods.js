@@ -5,41 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    top: [
+    tabs: [
       {
-        classify: "叶子"
+        name: "叶子",
+        active: true
       },
       {
-        classify: "根茎"
+        name: "根茎",
+        active: false
       },
       {
-        classify: "瓜果"
+        name: "瓜果",
+        active: false
       },
       {
-        classify: "肉蛋"
+        name: "肉蛋",
+        active: false
       },
       {
-        classify: "菌藻"
+        name: "菌藻",
+        active: false
       }
     ],
     list: [
       {
         img: "/images/jicai.jpeg",
         name: "荠菜",
-        tag1: "富含：钙",
-        tag2: ""
+        tag_good: "钙",
+        tag_bad: ""
       },
       {
         img: "/images/xianyadan.png",
         name: "咸鸭蛋",
-        tag1: "富含：蛋白质",
-        tag2: "注意：钠盐、脂肪"
+        tag_good: "蛋白质",
+        tag_bad: "钠盐、脂肪"
       },
       {
         img: "/images/xilanhua.jpeg",
         name: "西兰花",
-        tag1: "富含：维生素A、钙",
-        tag2: ""
+        tag_good: "维生素A、钙",
+        tag_bad: ""
       }
     ]
   },
@@ -48,7 +53,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log("foodsonload");
+    this.getTabs(this.getFoods);
   },
 
   /**
@@ -98,5 +104,62 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  changeItem: function(e){
+    //因为在子组件中bindtap得到index，
+    //因此需要子组件通过triggerevent抛出事件，父组件再bind捕获得到index，再修改data
+    let index = e.detail;
+    let tabs = this.data.tabs;
+    tabs.forEach((value,i)=>{
+      i == index?value.active=true:value.active=false;
+    })
+    this.setData({
+      tabs: tabs
+    })
+    //request查询data
+    this.getFoods(index);
+  },
+  getTabs: function(callback){
+    let that = this;
+    wx.request({
+      url: 'https://haiyun.luzhenmin.com/getTabs',
+      data: {
+      },
+      header: {
+        'content-type': 'application/json'//默认值
+      },
+      success (res) {
+        console.log("gettabs")
+        console.log(res.data);
+        let tabs = that.data.tabs;
+        let type = res.data.type;
+        for(let i=0; i<tabs.length; i++){
+          tabs[i].name = type[i].type;
+        }
+        console.log(tabs)
+        that.setData({
+          tabs: tabs
+        })
+        callback(0);
+      }
+    })
+  },
+  getFoods: function(index){
+    let that = this;
+    wx.request({
+      url: 'https://haiyun.luzhenmin.com/getFoods',
+      data: {
+        index: index
+      },
+      header: {
+        'content-type': 'application/json'//默认值
+      },
+      success (res) {
+        console.log(res.data);
+        that.setData({
+          list: res.data.list
+        })
+      }
+    })
   }
 })

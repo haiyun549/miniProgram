@@ -2,6 +2,7 @@
 <import src="../../template/top.wxml"/>
 <import src="../../template/list.wxml"/>
 
-<template is="search"></template>
+<!-- <template is="search"></template> -->
+<search></search>
 
 <template is="keep" data="{{list,title}}"></template>

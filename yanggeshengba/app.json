@@ -5,7 +5,10 @@
     "pages/my/my",
     "pages/foods/foods",
     "pages/knowledge/knowledge",
-    "pages/myCollect/myCollect"
+    "pages/myCollect/myCollect",
+    "pages/foods/vegetables",
+    "pages/foods/meats",
+    "components/search/search"
   ],
   "tabBar": {
     "color": "#515151",

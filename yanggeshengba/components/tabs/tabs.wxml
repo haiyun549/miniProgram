@@ -1,0 +1,8 @@
+<!--components/tabs/tabs.wxml-->
+<view class="top">
+  <block wx:for="{{tabs}}" wx:key="index">
+    <view class="top_classify" bindtap="tapTab" data-index="{{index}}">
+      <view class="top_content {{item.active?'active':''}}">{{item.name}}</view>
+    </view>
+  </block>
+</view>
